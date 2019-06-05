@@ -5,6 +5,7 @@ dependencies:
 	wget -O lib/stack.h https://raw.githubusercontent.com/ss-c-cpp-projects/stack/master/src/stack.h
 	wget -O lib/stack.c https://raw.githubusercontent.com/ss-c-cpp-projects/stack/master/src/stack.c
 
-test: 
+test: test/evaluator-test.o src/evaluator.o
 	mkdir -p bin
-	gcc -o bin/test.bin test/postfix-evaluator-test.o lib/assert.o lib/stack.o src/evaluator.c
+	gcc -g -o bin/test.bin test/evaluator-test.o lib/assert.o lib/stack.o src/evaluator.o
+	./bin/test.bin
