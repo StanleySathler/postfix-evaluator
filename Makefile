@@ -7,4 +7,4 @@ dependencies:
 
 test: 
 	mkdir -p bin
-	gcc -o bin/test.bin test/postfix-evaluator-test.o lib/assert.o lib/stack.o src/main.c
+	gcc -o bin/test.bin test/postfix-evaluator-test.o lib/assert.o lib/stack.o src/evaluator.c
